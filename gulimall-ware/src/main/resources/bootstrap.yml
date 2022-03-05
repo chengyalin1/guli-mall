@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 1.15.24.17:8848
+        namespace: b30ad1f6-6748-453a-8355-a23e55f31fd2
+        ext-config[0]:
+          data-id: gulimall-ware.yml
+          group: dev
+          refresh: true
+        ext-config[1]:
+          data-id: public.yml
+          group: dev
+          refresh: true
+
+
+
