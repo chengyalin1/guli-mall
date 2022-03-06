@@ -7,6 +7,7 @@ import com.xunqi.common.utils.R;
 import com.xunqi.gulimall.product.entity.CategoryEntity;
 import com.xunqi.gulimall.product.manager.CategoryManager;
 import com.xunqi.gulimall.product.service.CategoryService;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -79,16 +80,28 @@ public class CategoryController {
      * 保存
      */
     @RequestMapping("/save")
+    @CacheEvict(value = "product")
     public R save(@RequestBody CategoryEntity category) {
         categoryService.save(category);
 
         return R.ok();
     }
+    /**
+     * 修改
+     */
+    @RequestMapping("/update/sort")
+    @CacheEvict(value = "product")
+    public R updateBatch(@RequestBody CategoryEntity[] category) {
+        categoryService.updateBatchById(Arrays.asList(category));
+//        categoryService.updateById(category);
 
+        return R.ok();
+    }
     /**
      * 修改
      */
     @RequestMapping("/update")
+    @CacheEvict(value = "product",keyGenerator = "keyGenerator")
     public R update(@RequestBody CategoryEntity category) {
         categoryService.updateById(category);
 
@@ -99,17 +112,19 @@ public class CategoryController {
      * 删除
      */
     @RequestMapping("/delete")
+    @CacheEvict(value = "product",keyGenerator = "keyGenerator")
     public R delete(@RequestBody Long[] catIds) {
         categoryManager.removeByIds(Arrays.asList(catIds));
 
         return R.ok();
     }
+
     /**
-     * 删除
+     * 测试导入
      */
     @PostMapping("/import")
     public R imports(MultipartFile file) {
         R r = minioManager.uploadFiles(file, null);
-        return R.ok().put("",r);
+        return R.ok().put("", r);
     }
 }

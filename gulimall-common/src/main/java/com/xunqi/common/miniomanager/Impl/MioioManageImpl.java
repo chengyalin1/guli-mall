@@ -43,7 +43,7 @@ public class MioioManageImpl implements MinioManager {
             InputStream inputStream = file.getInputStream();
             minioService.putObject(bucketName, objectName, inputStream);
             inputStream.close();
-            return R.ok().put("", (minioService.getObjectUrl(bucketName, objectName)));
+            return R.ok().put("url", (minioService.getObjectUrl(bucketName, objectName)));
 
         } catch (Exception e) {
             e.printStackTrace();
