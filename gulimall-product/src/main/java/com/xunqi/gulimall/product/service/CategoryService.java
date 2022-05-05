@@ -24,5 +24,13 @@ public interface CategoryService extends IService<CategoryEntity> {
      * @return 数据
      */
     List<CategoryEntity> listWithTree();
+
+    /**
+     * 查询当前目录的完整路径
+     *
+     * @param catelogId 当前目录
+     * @return 完整路径
+     */
+    Long[] findCateLogPath(Long catelogId);
 }
 

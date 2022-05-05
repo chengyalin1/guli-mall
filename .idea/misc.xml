@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.springframework.beans.factory.annotation.Autowired" />
+    </list>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -18,14 +23,6 @@
         <option value="$PROJECT_DIR$/xxljobexecutor/pom.xml" />
         <option value="$PROJECT_DIR$/gulimall-gateway/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/gulimall-feignclient/pom.xml" />
-        <option value="$PROJECT_DIR$/xxl-job/pom.xml" />
-        <option value="$PROJECT_DIR$/xxl-job/xxl-job-admin/pom.xml" />
-        <option value="$PROJECT_DIR$/xxl-job/xxl-job-core/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

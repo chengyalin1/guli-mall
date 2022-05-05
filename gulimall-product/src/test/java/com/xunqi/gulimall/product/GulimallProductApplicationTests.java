@@ -1,11 +1,13 @@
 package com.xunqi.gulimall.product;
 
+import cn.hutool.json.JSONUtil;
 import com.xunqi.gulimall.product.dao.AttrGroupDao;
 import com.xunqi.gulimall.product.dao.SkuSaleAttrValueDao;
 import com.xunqi.gulimall.product.entity.BrandEntity;
 import com.xunqi.common.feign.CouponFeignService;
 import com.xunqi.gulimall.product.service.BrandService;
 import com.xunqi.gulimall.product.service.CategoryService;
+import io.micrometer.core.instrument.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -60,5 +62,9 @@ public class GulimallProductApplicationTests {
         Long[] id = {123L};
         couponFeignService.delete(id);
     }
-
+    @Test
+    public void test() {
+        Long[] cateLogPath = categoryService.findCateLogPath(225L);
+        System.out.println(cateLogPath.toString());
+    }
 }

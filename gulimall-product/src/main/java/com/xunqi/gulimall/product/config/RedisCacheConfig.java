@@ -27,7 +27,7 @@ import java.util.Set;
 public class RedisCacheConfig {
 
 
-    private int defaultExpireTime = 600;//毫秒
+    private final int defaultExpireTime = 600;//毫秒
 
     private int userCacheExpireTime = 10000;
 

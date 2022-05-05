@@ -44,7 +44,7 @@ public class MinioConfig {
 
     @Bean
     public MinioClient getMinioClient() throws InvalidEndpointException, InvalidPortException {
-        MinioClient minioClient = new MinioClient("1.15.24.17", 9000, "minioadmin", "minioadmin", false);
+        MinioClient minioClient = new MinioClient("1.15.24.17", 9000, "admin", "12345678", false);
 
         return minioClient;
     }

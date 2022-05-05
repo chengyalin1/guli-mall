@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="xxl-job-core" />
         <module name="gulimall-coupon" />
         <module name="gulimall-common" />
         <module name="xxljobexecutordemo" />
@@ -15,6 +16,7 @@
         <module name="gulimall-ware" />
         <module name="gulimall-member" />
         <module name="gulimall-gateway" />
+        <module name="xxl-job-admin" />
         <module name="renren-generator" />
         <module name="gulimall-product" />
       </profile>
@@ -22,9 +24,6 @@
     <bytecodeTargetLevel>
       <module name="gulimall-feignclient" target="8" />
       <module name="spring-boot-minio" target="1.8" />
-      <module name="xxl-job" target="1.8" />
-      <module name="xxl-job-admin" target="1.8" />
-      <module name="xxl-job-core" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

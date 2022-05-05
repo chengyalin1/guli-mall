@@ -24,7 +24,7 @@ import java.util.Map;
  * @date 2022-02-24 17:45:16
  */
 @RestController
-@RefreshScope
+//@RefreshScope
 @RequestMapping("product/attr")
 public class AttrController {
     @Autowired

@@ -2,8 +2,8 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 1.15.24.17:8848
-        namespace: b30ad1f6-6748-453a-8355-a23e55f31fd2
+        server-addr: 1.15.24.17:18848
+        namespace: a2df10b6-9392-4c82-b58e-98413eabf9ad
         ext-config[0]:
           data-id: gulimall-product.yml
           group: dev
@@ -12,6 +12,5 @@ spring:
           data-id: public.yml
           group: dev
           refresh: true
-
 
 
