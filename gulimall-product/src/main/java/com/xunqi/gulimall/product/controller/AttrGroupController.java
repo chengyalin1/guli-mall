@@ -1,5 +1,6 @@
 package com.xunqi.gulimall.product.controller;
 
+import com.xunqi.common.annotation.RateLimiter;
 import com.xunqi.common.utils.PageUtils;
 import com.xunqi.common.utils.R;
 import com.xunqi.gulimall.product.entity.AttrGroupEntity;
@@ -35,6 +36,7 @@ public class AttrGroupController {
     /**
      * 列表
      */
+    @RateLimiter(qps = 1,timeout = 100)
     @RequestMapping("/list/{catelogId}")
     public R list(@RequestParam Map<String, Object> params,
                   @PathVariable("catelogId") Long catelogId) {
