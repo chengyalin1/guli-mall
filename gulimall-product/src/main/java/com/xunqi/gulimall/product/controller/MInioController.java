@@ -20,7 +20,7 @@ public class MInioController {
     }
 
     /**
-     * 修改
+     * 上传文件
      */
     @RequestMapping("/uploade")
     public R update(MultipartFile file ){

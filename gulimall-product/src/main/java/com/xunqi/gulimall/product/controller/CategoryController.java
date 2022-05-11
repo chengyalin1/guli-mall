@@ -125,6 +125,7 @@ public class CategoryController {
     @PostMapping("/import")
     public R imports(MultipartFile file) {
         R r = minioManager.uploadFiles(file, null);
+
         return R.ok().put("", r);
     }
 }
